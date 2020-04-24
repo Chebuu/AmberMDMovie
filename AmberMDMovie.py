@@ -200,8 +200,7 @@ if __name__ == '__main__':
         m.run()
     except:
         error_status = sys.exc_info()
-        map(f.write, traceback.format_exception(error_status[0],
-    error_status[1], error_status[2]))
+        map(f.write, traceback.format_exception(error_status[0], error_status[1], error_status[2]))
         f.flush()
         sys.exit(1)
     sys.exit(0)
